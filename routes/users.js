@@ -24,7 +24,7 @@ router.get('/signup', function(req, res){
 });
 
 //===== SHOW PAGE (USER LOGGED IN): shows the page ONLY IF it's the current user's session. ======
-router.get('/:id', authHelpers.authorized, function(req, res, next) {
+router.get('/:id', /*authHelpers.authorized,*/ function(req, res, next) {
 
   User.findById(req.params.id)
        .exec(function(err, user) {
@@ -35,7 +35,7 @@ router.get('/:id', authHelpers.authorized, function(req, res, next) {
   Meals.find({})
         .exec(function(err, meals) {
             if(err) console.log(err);
-            console.log(meals, user);
+            console.log(meals);
             res.render('users/show', {
               meals: meals,
               user: user

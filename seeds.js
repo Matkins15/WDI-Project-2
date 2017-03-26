@@ -3,7 +3,7 @@ mongoose.connect('mongodb://localhost/WDI-project-2');
 var Meals = require('./models/meals');
 var User = require('./models/users');
 
-mongoose.promise = global.Promise;
+mongoose.Promise = global.Promise;
 
 Meals.remove({}, function(err) {
     console.log(err);

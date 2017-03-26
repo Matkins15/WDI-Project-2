@@ -27,19 +27,19 @@ function loginUser(req, res, next) {
   });
 }
 
-function authorized(req, res, next) {
-  console.log(req.session.currentUser);
-  console.log(req.params.id)
-  if (!req.session.currentUser || req.session.currentUser._id !== req.params.id) {
-    return res.json({status: 404, data: "unauthorized"});
-  }
-  next();
-};
+// function authorized(req, res, next) {
+//   console.log(req.session.currentUser);
+//   console.log(req.params.id)
+//   if (!req.session.currentUser || req.session.currentUser._id !== req.params.id) {
+//     return res.json({status: 404, data: "unauthorized"});
+//   }
+//   next();
+// };
 
 //Export this function below:
 
 module.exports = {
   createSecure: createSecure,
   loginUser: loginUser,
-  authorized: authorized
+  // authorized: authorized
 };

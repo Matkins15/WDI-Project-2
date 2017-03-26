@@ -1,13 +1,10 @@
 <h1>welcome</h1>
 
 <h1>My Favorite Meals</h1>
-
 <ol>
     {{#each meals}}
     <li>
-        <h1><a href="/meals/{{this.id}}">{{this.name}}</a></h1>
-        <h3>{{this.type}}</h3>
-        <p>{{this.calories}}, {{this.allergies}}</p>
+        <h1><a href="/users/{{../user.id}}/meals/{{this.id}}/edit">{{this.name}}</a></h1>
     </li>
     {{/each}}
 </ol>

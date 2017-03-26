@@ -7,8 +7,7 @@ var MealsSchema = new Schema({
     name: String,
     type: String,
     calories: Number,
-    allergies: String,
-    created_by: String,
+    description: String,
 });
 
 MealsSchema.pre('save', function(next){
@@ -20,9 +19,9 @@ MealsSchema.pre('save', function(next){
     next();
 });
 
-MealsSchema.virtual('fullName').get(function () {
-    return this.first_name + ' ' + this.last_name;
-});
+// MealsSchema.virtual('fullName').get(function () {
+//     return this.first_name + ' ' + this.last_name;
+// });
 
 // var MealsModel = mongoose.model("Meals", MealsSchema);
 
