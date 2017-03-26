@@ -11,34 +11,34 @@ Meals.remove({}, function(err) {
 
 var mealNumOne = new Meals({
     name: 'Meal One',
-    type: 'For the Athlete',
-    calories: '3000',
-    allergies: 'Peanuts, Almonds',
-    created_by: 'Matthew Atkins'
+    type: 'Breakfast',
+    description: 'Break the overnight fast, curb your appetite and kick start your metabolism with a meal rich in protein, antioxidants, and complex carbohydrates.',
+    exampleMeal: '3 egg whites, 1 whole egg, 1/cup of oatmeal, and 1/2 cup of strawberries'
+    calories: '300 - 500'
 });
 
 var mealNumTwo = new Meals({
     name: 'Meal Two',
-    type: 'For the 9-5er',
-    calories: '2100',
-    allergies: 'Peanuts, Almonds',
-    created_by: 'Matthew Atkins'
+    type: 'Lunch',
+    description: 'Ever tried coding on an empty stomach? No bueno. Provide your body and mind the nourishments it needs to perform at an optimum level.',
+    exampleMeal: '4oz salmon, 1/2 cup cooked brown rice, 1 cup of brocolli',
+    calories: '400 - 600',
 });
 
 var mealNumThree = new Meals({
     name: 'Meal Three',
-    type: 'Somewhat Active',
-    calories: '2500',
-    allergies: 'Peanuts, Almonds',
-    created_by: 'Matthew Atkins'
+    type: 'Dinner',
+    description: 'Want to help prevent a bad nights sleep? Eat Dinner! This important meal will steady the release of glucose into your blood stream preventing disturbance in your sleep.',
+    exampleMeal: '6oz of chicken, 1 cup cubed sweet potatoes, and 2 cups spinach',
+    calories: '400 - 600',
 });
 
 var mealNumFour = new Meals({
     name: 'Meal Four',
-    type: 'Gamer',
-    calories: '2000',
-    allergies: 'Peanuts, Almonds',
-    created_by: 'Matthew Atkins'
+    type: 'Snacks',
+    description: '"Snacking" helps to prevent yourself from overeating during your next meal.',
+    exampleMeal: 'Apple with 2 Tbs of peanut butter OR 1 serving of nuts OR carrots with 2-3 Tbs of hummus ',
+    calories: '200 - 300',
 });
 
 mealNumOne.save(function(err) {
