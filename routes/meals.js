@@ -40,6 +40,43 @@ router.get('/', function(req, res) {
         });
 });
 
+// new meals
+router.get('/new', function(req, res) {
+    res.render('meals/new');
+});
+
+// create meals
+router.post('/', function(req, res) {
+    var meals = new Meals({
+        first_name: req.body.first_name,
+        last_name: req.body.last_name,
+        country: req.body.country,
+        book_title: req.body.book_title,
+        publication_year: req.body.publication_year
+    });
+    author.save(function(err, meals){
+        if (err) { console.log(err); }
+
+        console.log(meals);
+        // res.send(author);
+        res.render('meals/show', {
+        	meals: meals
+        });
+    });
+});
+
+// edit meals
+router.get('/:id/edit', function(req,res) {
+    Meals.findById(req.params.id)
+    .exec(function(err, meals) {
+        if (err) { console.log(err); }
+
+        res.render('meals/edit', {
+            meals: meals
+        });
+    });
+});
+
 //show meals
 router.get('/:id', function(req, res) {
     Meals.findById(req.params.id)

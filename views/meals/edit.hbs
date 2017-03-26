@@ -1,0 +1,34 @@
+<h1>Edit {{author.fullName}}</h1>
+
+<div class="row">
+    <form action="/meals/{{meals.id}}?_method=PATCH" method="POST" class="col-md-6 col-md-offset-3">
+        <div class="form-group">
+            <label for="first_name">First Name:</label>
+            <input type="text" name="first_name" value="{{meals.first_name}}" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="last_name">Last Name:</label>
+            <input type="text" name="last_name" value="{{meals.last_name}}" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="country">Country:</label>
+            <input type="text" name="country" value="{{meals.country}}" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="book_title">Book Title:</label>
+            <input type="text" name="book_title" value="{{meals.book_title}}" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="publication_year">Publication Year:</label>
+            <input type="text" name="publication_year" value="{{meals.publication_year}}" class="form-control">
+        </div>
+        <div>
+            <input type="submit" value="Submit" class="btn btn-primary">
+        </div>
+    </form>
+</div>
+
+<div>
+    <a href="/meals/{{meals.id}}" class="btn btn-default">Back</a>
+    <a href="/meals" class="btn btn-default">Main Page</a>
+</div>
