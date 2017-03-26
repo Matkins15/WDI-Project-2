@@ -10,64 +10,57 @@ Meals.remove({}, function(err) {
 });
 
 var mealNumOne = new Meals({
-    first_name: 'Antoine',
-    last_name: 'de Saint-Exupery',
-    country: 'France',
-    book_title: 'The Little Prince',
-    publication_year: '1943'
+    name: 'Meal One',
+    type: 'For the Athlete',
+    calories: '3000',
+    allergies: 'Peanuts, Almonds',
+    created_by: 'Matthew Atkins'
 });
 
 var mealNumTwo = new Meals({
-    type: 'Jasper',
-    last_name: 'Fforde',
-    country: 'England',
-    book_title: 'The Eyre Affair',
-    publication_year: '2001'
+    name: 'Meal Two',
+    type: 'For the 9-5er',
+    calories: '2100',
+    allergies: 'Peanuts, Almonds',
+    created_by: 'Matthew Atkins'
 });
 
 var mealNumThree = new Meals({
-    first_name: 'Lauren',
-    last_name: 'Willig',
-    country: 'United States',
-    book_title: 'The Secret History of the Pink Carnation', 	publication_year: '2000'
-});
-
-var mealNumThree = new Meals({
-    first_name: 'Lisa',
-    last_name: 'Lutz',
-    country: 'Unites States',
-    book_title: 'The Spellman Files: A Novel',
-    publication_year: '2007'
+    name: 'Meal Three',
+    type: 'Somewhat Active',
+    calories: '2500',
+    allergies: 'Peanuts, Almonds',
+    created_by: 'Matthew Atkins'
 });
 
 var mealNumFour = new Meals({
-    first_name: 'Lisa',
-    last_name: 'Lutz',
-    country: 'Unites States',
-    book_title: 'The Spellman Files: A Novel',
-    publication_year: '2007'
+    name: 'Meal Four',
+    type: 'Gamer',
+    calories: '2000',
+    allergies: 'Peanuts, Almonds',
+    created_by: 'Matthew Atkins'
 });
 
-saintExupery.save(function(err) {
+mealNumOne.save(function(err) {
   if (err) console.log(err);
 
-  console.log('de Saint-Exupery created!');
+  console.log('mealNumOne created!');
 });
 
-fforde.save(function(err) {
+mealNumTwo.save(function(err) {
   if (err) console.log(err);
 
-  console.log('Fforde created!');
+  console.log('mealNumTwo created!');
 });
 
-willig.save(function(err) {
+mealNumThree.save(function(err) {
   if (err) console.log(err);
 
-  console.log('Willig created!');
+  console.log('mealNumThree created!');
 });
 
-lutz.save(function(err) {
+mealNumFour.save(function(err) {
   if (err) console.log(err);
 
-  console.log('Lutz created!');
+  console.log('mealNumFour created!');
 });

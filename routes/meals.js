@@ -1,7 +1,7 @@
 // REQUIREMENTS //
 
 var express = require('express');
-var router = express.Router();
+var router = express.Router({mergeParams: true});
 var mongoose = require('mongoose');
 var authHelpers = require('../helpers/auth.js');
 var User = require('../models/users.js');
@@ -44,8 +44,12 @@ var Meals = require('../models/meals.js');
 //         });
 // });
 
+//===== NEW MEALS ========================================
+router.get('/new', function(req, res) {
+    res.render('meals/new');
+});
 
-//===== CREATE MEALS =============================================
+//===== CREATE MEALS ======================================
 router.post('/', function(req, res) {
   User.findById(req.params.userId)
     .exec(function(err, user) {
@@ -65,13 +69,6 @@ router.post('/', function(req, res) {
       res.redirect('/user${req.params.userdId}');
     });
 });
-
-
-// NEW MEALS //
-router.get('/new', function(req, res) {
-    res.render('meals/new');
-});
-
 
 //======== EDIT MEALS ====================================
 router.get('/:id/edit', function(req,res) {
@@ -96,7 +93,7 @@ router.get('/:id/edit', function(req,res) {
 });
 
 
-//======== UPDATE =================================================
+//======== UPDATE ========================================
 
 //create a PUT "/:id" route that saves the changes from the restaurant.
 router.put('/:id', function(req, res) {

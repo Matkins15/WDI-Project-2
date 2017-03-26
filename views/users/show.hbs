@@ -5,11 +5,13 @@
 <ol>
     {{#each meals}}
     <li>
-        <h1><a href="/meals/{{this.id}}">{{this.fullName}}</a></h1>
-        <h3>{{this.country}}</h3>
-        <p>{{this.bookTitle}}, {{this.publication_year}}</p>
+        <h1><a href="/meals/{{this.id}}">{{this.name}}</a></h1>
+        <h3>{{this.type}}</h3>
+        <p>{{this.calories}}, {{this.allergies}}</p>
     </li>
     {{/each}}
 </ol>
 
-<a href="/meals/new" class="btn btn-default">Create a New Meal</a>
+<form action="/users/{{user.id}}/meals/new">
+  <input class="btn btn-default" type="submit" value="Create New Meal">
+</form>
