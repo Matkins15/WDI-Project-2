@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/WDI-Project-2');
-
-var Meals = require("./models/meals");
+var Meals = require('./models/meals');
+var User = require('./models/users');
 
 mongoose.promise = global.Promise;
 

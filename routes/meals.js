@@ -105,38 +105,42 @@ router.put('/:id', function(req, res) {
             if (err) {
               console.log(err);
             }
-          meals.name = req.body.name;
-          meals.location = req.body.location;
-          meals.type = req.body.type;
+          meals.first_name = req.body.first_name;
+          meals.last_name = req.body.last_name;
+          meals.country = req.body.country;
+          meals.book_title = req.body.book_title;
+          meals.publication_year = req.body.publication_year;
           meals.save();
         });
     User.findById(req.params.userId)
         .exec(function(err, user) {
             if (err) { console.log(err); }
-            var mealsToEdit = meals.restaurant.id(req.params.id);
-            mealsToEdit.name = req.body.name;
-            mealsToEdit.location = req.body.location;
-            mealsToEdit.type = req.body.type;
+            var mealsToEdit = users.meals.id(req.params.id);
+            mealsToEdit.first_name = req.body.first_name;
+            mealsToEdit.last_name = req.body.last_name;
+            mealsToEdit.country = req.body.country;
+            mealsToEdit.book_title = req.body.book_title;
+            mealsToEdit.publication_year = req.body.publication_year;
             user.save();
             res.redirect(`/users/${req.params.userId}`);
         });
 });
 
 
-//show meals
-router.get('/:id', function(req, res) {
-    Meals.findById(req.params.id)
-        .exec(function(err, meals) {
-            if(err) console.log(err);
-
-            console.log(meals);
-            res.render('meals/show');
-        });
-});
+// //show meals
+// router.get('/:id', function(req, res) {
+//     Meals.findById(req.params.id)
+//         .exec(function(err, meals) {
+//             if(err) console.log(err);
+//
+//             console.log(meals);
+//             res.render('meals/show');
+//         });
+// });
 
 //========= DELETE MEALS =================================
 router.delete('/:id', function(req, res) {
-    users.findByIdAndRemove(req.params.userId, {
+    Users.findByIdAndRemove(req.params.userId, {
       $pull: {
         meals: {_id: req.params.id}
       }
@@ -155,5 +159,5 @@ router.delete('/:id', function(req, res) {
         });
       });
 
-
+//====== EXPORTS ===========================================
 module.exports = router;
