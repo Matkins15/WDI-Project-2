@@ -5,7 +5,6 @@ mongoose.promise = global.Promise;
 
 var MealsSchema = new Schema({
     name: String,
-    type: String,
     description: String,
     exampleMeal: String,
     calories: Number

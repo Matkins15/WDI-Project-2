@@ -23,10 +23,9 @@ router.post('/', function(req, res) {
       }
       var newMeals = new Meals({
           name: req.body.name,
-          type: req.body.type,
-          calories: req.body.calories,
           description: req.body.description,
-          // created_by: req.body.created_by
+          exampleMeal: req.body.exampleMeal,
+          calories: req.body.calories,
     });
       newMeals.save();
       user.meals.push(newMeals);
@@ -68,9 +67,9 @@ router.put('/:id', function(req, res) {
               console.log(err);
             }
           meals.name = req.body.name;
-          meals.type = req.body.type;
-          meals.calories = req.body.calories;
           meals.description = req.body.description;
+          meals.exampleMeal = req.body.exampleMeal;
+          meals.calories = req.body.calories;
           meals.save();
         });
     User.findById(req.params.userId)
@@ -78,9 +77,9 @@ router.put('/:id', function(req, res) {
             if (err) { console.log(err); }
             var mealsToEdit = user.meals.id(req.params.id);
             mealsToEdit.name = req.body.name;
-            mealsToEdit.type = req.body.type;
-            mealsToEdit.calories = req.body.calories;
             mealsToEdit.description = req.body.description;
+            mealsToEdit.exampleMeal = req.body.exampleMeal;
+            mealsToEdit.calories = req.body.calories;
             user.save();
             res.redirect(`/users/${req.params.userId}`);
         });
