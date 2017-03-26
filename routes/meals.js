@@ -46,7 +46,9 @@ var Meals = require('../models/meals.js');
 
 //===== NEW MEALS ========================================
 router.get('/new', function(req, res) {
-    res.render('meals/new');
+    res.render('meals/new', {
+      
+    });
 });
 
 //===== CREATE MEALS ======================================

@@ -15,7 +15,7 @@
             <input type="text" name="country" class="form-control">
         </div>
         <div class="form-group">
-            <label for="allergies">Book Title:</label>
+            <label for="allergies">Allergies:</label>
             <input type="text" name="allergies" class="form-control">
         </div>
         <div class="form-group">
@@ -28,4 +28,6 @@
     </form>
 </div>
 
-<a href="/meals" class="btn btn-default">Main Page</a>
+<form action="/users/{{user.id}}">
+  <input class="btn btn-default" type="submit" value="Go Back">
+</form>
