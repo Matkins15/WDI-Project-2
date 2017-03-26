@@ -16,7 +16,7 @@ var users = require('./routes/users');
 
 var app = express();
 
-mongoose.connect('mongodb://localhost/WDI-Project-2');
+mongoose.connect('mongodb://localhost/WDI-project-2');
 
 //CONTROLLERS
 var indexControllers = require('./routes/index');

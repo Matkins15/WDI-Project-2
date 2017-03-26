@@ -1,1 +1,15 @@
 <h1>welcome</h1>
+
+<h1>My Favorite Meals</h1>
+
+<ol>
+    {{#each meals}}
+    <li>
+        <h1><a href="/meals/{{this.id}}">{{this.fullName}}</a></h1>
+        <h3>{{this.country}}</h3>
+        <p>{{this.bookTitle}}, {{this.publication_year}}</p>
+    </li>
+    {{/each}}
+</ol>
+
+<a href="/meals/new" class="btn btn-default">Create a New Meal</a>
