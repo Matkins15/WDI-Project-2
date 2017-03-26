@@ -11,14 +11,20 @@ var session = require('express-session');
 var methodOverride = require('method-override');
 var db = require('./db');
 
-mongoose.connect('mongodb://localhost/WDI-Project-2');
-
 var index = require('./routes/index');
 var users = require('./routes/users');
-var meals = require('./routes/meals');
-var sessions = require('./routes/sessions');
 
 var app = express();
+
+mongoose.connect('mongodb://localhost/WDI-Project-2');
+
+//CONTROLLERS
+var indexControllers = require('./routes/index');
+var usersControllers = require('./routes/users');
+var mealsControllers = require('./routes/meals');
+var sessionsControllers = require('./routes/sessions');
+
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -40,9 +46,13 @@ app.use(session({
 }));
 
 app.use('/', index);
-app.use('/users', users);
-app.use('/:userId/meals', meals);
-app.use('/sessions', sessions);
+app.use('users', users);
+
+
+app.use('/', indexControllers);
+app.use('/users', usersControllers);
+app.use('/users/:userId/meals', mealsControllers);
+app.use('/sessions', sessionsControllers);
 
 // catch 404 and forward to error handler
 // app.use(function(req, res, next) {
