@@ -3,17 +3,17 @@ var router = express.Router();
 
 var Meals = require('../models/meals');
 //==============================================================
-// // index authors
+// // index meals
 // router.get('/', function(req, res) {
-//     res.send('authors will be here');
+//     res.send('meals will be here');
 // });
 //
 // module.exports = router;
 //===============================================================
-// Setting up the routes/author's index route to show our data
-// index authors
+// Setting up the routes/Meals' index route to show our data
+// index meals
 // router.get('/', function(req, res) {
-//     // res.send('authors will be here');
+//     // res.send('meals will be here');
 //     Meals.find({})
 //         .exec(function(err, meals) {
 //             if(err) console.log(err);
@@ -27,13 +27,13 @@ var Meals = require('../models/meals');
 // update index to render meals in browser
 // index meals
 router.get('/', function(req, res) {
-    // res.send('authors will be here');
+    // res.send('meals will be here');
     Meals.find({})
         .exec(function(err, meals) {
             if(err) console.log(err);
 
             console.log(meals);
-            // res.send(authors);
+            // res.send(meals);
             res.render('meals/index', {
             	  meals: meals
             });
@@ -58,7 +58,7 @@ router.post('/', function(req, res) {
         if (err) { console.log(err); }
 
         console.log(meals);
-        // res.send(author);
+        // res.send(meals);
         res.render('meals/show', {
         	meals: meals
         });
@@ -77,6 +77,26 @@ router.get('/:id/edit', function(req,res) {
     });
 });
 
+// update meals
+router.patch('/:id', function(req, res) {
+    Meals.findByIdAndUpdate(req.params.id, {
+        first_name: req.body.first_name,
+        last_name: req.body.last_name,
+        country: req.body.country,
+        book_title: req.body.book_title,
+        publication_year: req.body.publication_year
+    }, { new: true })
+        .exec(function(err, author) {
+            if (err) { console.log(err); }
+
+            console.log(meals);
+            // res.send(meals);
+            res.render('meals/show', {
+                meals: meals
+            });
+        });
+});
+
 //show meals
 router.get('/:id', function(req, res) {
     Meals.findById(req.params.id)
@@ -85,6 +105,19 @@ router.get('/:id', function(req, res) {
 
             console.log(meals);
             res.render('meals/index');
+        });
+});
+
+// delete meals
+router.delete('/:id', function(req, res) {
+    Meals.findByIdAndRemove(req.params.id)
+        .exec(function(err, author) {
+            if (err) { console.log(err); }
+
+            console.log('Meals deleted.');
+            // res.send('Meals deleted.');
+            //redirects back to the index route
+            res.redirect('/meals');
         });
 });
 
