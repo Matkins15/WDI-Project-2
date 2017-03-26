@@ -40,14 +40,14 @@ router.get('/', function(req, res) {
         });
 });
 
-// show meals
+//show meals
 router.get('/:id', function(req, res) {
     Meals.findById(req.params.id)
         .exec(function(err, meals) {
             if(err) console.log(err);
 
             console.log(meals);
-            res.send(meals);
+            res.render('meals/index');
         });
 });
 

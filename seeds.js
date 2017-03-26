@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/WDI-project-2');
+mongoose.connect('mongodb://localhost/WDI-Project-2');
 
 var Meals = require("./models/meals");
 

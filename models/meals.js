@@ -24,4 +24,10 @@ MealsSchema.virtual('fullName').get(function () {
     return this.first_name + ' ' + this.last_name;
 });
 
+// var MealsModel = mongoose.model("Meals", MealsSchema);
+
 module.exports = mongoose.model("Meals", MealsSchema);
+
+// module.exports = {
+//   Meals: MealsModel
+// }
