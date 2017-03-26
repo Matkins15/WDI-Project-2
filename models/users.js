@@ -5,13 +5,13 @@ mongoose.promise = global.Promise;
 
 var UsersSchema = new Schema({
   email: {type: String, required: true, unique: true},
-  password_digest: String,
-  firstName: String,
-  lastName: String,
-  age: Number,
-  weight: Number,
-  created_at: Date,
-  updated_at: Date
+  password_digest: String
+  // firstName: String,
+  // lastName: String,
+  // age: Number,
+  // weight: Number,
+  // created_at: Date,
+  // updated_at: Date
 });
 
 UsersSchema.pre('save', function(next){
@@ -23,8 +23,8 @@ UsersSchema.pre('save', function(next){
     next();
 });
 
-UsersSchema.virtual('fullName').get(function () {
-    return this.first_name + ' ' + this.last_name;
-});
+// UsersSchema.virtual('fullName').get(function () {
+//     return this.first_name + ' ' + this.last_name;
+// });
 
 module.exports = mongoose.model("Users", UsersSchema);

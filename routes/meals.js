@@ -104,7 +104,7 @@ router.get('/:id', function(req, res) {
             if(err) console.log(err);
 
             console.log(meals);
-            res.render('meals/index');
+            res.render('meals/show');
         });
 });
 

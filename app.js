@@ -41,7 +41,7 @@ app.use(session({
 
 app.use('/', index);
 app.use('/users', users);
-app.use('/meals', meals);
+app.use('/:userId/meals', meals);
 app.use('/sessions', sessions);
 
 // catch 404 and forward to error handler
