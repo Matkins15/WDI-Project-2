@@ -4,11 +4,14 @@ var Schema = mongoose.Schema;
 mongoose.promise = global.Promise;
 
 var UsersSchema = new Schema({
-    first_name: String,
-    last_name: String,
-    country: String,
-    book_title: String,
-    publication_year: String
+  email: {type: String, required: true, unique: true},
+  password_digest: String,
+  firstName: String,
+  lastName: String,
+  age: Number,
+  weight: Number,
+  created_at: Date,
+  updated_at: Date
 });
 
 UsersSchema.pre('save', function(next){
