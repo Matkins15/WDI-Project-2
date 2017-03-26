@@ -53,11 +53,11 @@ router.post('/', function(req, res) {
         console.log(err);
       }
       var newMeals = new Meals({
-          first_name: req.body.first_name,
-          last_name: req.body.last_name,
-          country: req.body.country,
-          book_title: req.body.book_title,
-          publication_year: req.body.publication_year
+          name: req.body.name,
+          type: req.body.type,
+          calories: req.body.calories,
+          allergies: req.body.allergies,
+          created_by: req.body.created_by
     });
       newMeals.save();
       user.meals.push(newMeals);
@@ -105,38 +105,26 @@ router.put('/:id', function(req, res) {
             if (err) {
               console.log(err);
             }
-          meals.first_name = req.body.first_name;
-          meals.last_name = req.body.last_name;
-          meals.country = req.body.country;
-          meals.book_title = req.body.book_title;
-          meals.publication_year = req.body.publication_year;
+          meals.name = req.body.name;
+          meals.type = req.body.type;
+          meals.calories = req.body.calories;
+          meals.allergies = req.body.allergies;
+          meals.created_by = req.body.created_by;
           meals.save();
         });
     User.findById(req.params.userId)
         .exec(function(err, user) {
             if (err) { console.log(err); }
             var mealsToEdit = users.meals.id(req.params.id);
-            mealsToEdit.first_name = req.body.first_name;
-            mealsToEdit.last_name = req.body.last_name;
-            mealsToEdit.country = req.body.country;
-            mealsToEdit.book_title = req.body.book_title;
-            mealsToEdit.publication_year = req.body.publication_year;
+            mealsToEdit.name = req.body.name;
+            mealsToEdit.type = req.body.type;
+            mealsToEdit.calories = req.body.calories;
+            mealsToEdit.allergies = req.body.allergies;
+            mealsToEdit.created_by = req.body.created_by;
             user.save();
             res.redirect(`/users/${req.params.userId}`);
         });
 });
-
-
-// //show meals
-// router.get('/:id', function(req, res) {
-//     Meals.findById(req.params.id)
-//         .exec(function(err, meals) {
-//             if(err) console.log(err);
-//
-//             console.log(meals);
-//             res.render('meals/show');
-//         });
-// });
 
 //========= DELETE MEALS =================================
 router.delete('/:id', function(req, res) {

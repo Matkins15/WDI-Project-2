@@ -4,11 +4,11 @@ var Schema = mongoose.Schema;
 mongoose.promise = global.Promise;
 
 var MealsSchema = new Schema({
-    first_name: String,
-    last_name: String,
-    country: String,
-    book_title: String,
-    publication_year: String
+    name: String,
+    type: String,
+    calories: Number,
+    allergies: String,
+    created_by: String,
 });
 
 MealsSchema.pre('save', function(next){

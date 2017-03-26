@@ -1,10 +1,10 @@
-<h1>{{meals.fullName}}</h1>
-<h3>{{meals.country}}</h3>
-<p>{{meals.book_title}}, {{meals.publication_year}}</p>
+<h1>{{meals.name}}</h1>
+<h3>{{meals.type}}</h3>
+<p>{{meals.calories}}, {{meals.calories}}</p>
 
 <a href="/meals" class="btn btn-default">Main Page</a>
 <div>
-    <a href="/meals/{{meals.id}}/edit" class="btn btn-primary">Edit {{meals.fullName}}</a>
+    <a href="/meals/{{meals.id}}/edit" class="btn btn-primary">Edit {{meals.name}}</a>
 </div>
 
 <form action="/meals/{{meals.id}}?_method=DELETE" method="POST">

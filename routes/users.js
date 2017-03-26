@@ -18,12 +18,10 @@ router.get('/', function(req, res, next) {
     });
 });
 
-
 //====== SIGN UP PAGE ==============================================
 router.get('/signup', function(req, res){
   res.render('users/signup.hbs');
 });
-
 
 //===== SHOW PAGE (USER LOGGED IN): shows the page ONLY IF it's the current user's session. ======
 router.get('/:id', authHelpers.authorized, function(req, res, next) {

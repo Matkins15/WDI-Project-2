@@ -3,7 +3,7 @@ router = express.Router();
 var User = require('../models/users.js');
 var authHelpers = require('../helpers/auth.js');
 
-//LOGIN
+//======= LOGIN =============================================
 router.get('/login', function(req, res) {
   res.render('users/login.hbs');
 });

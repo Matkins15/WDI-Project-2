@@ -3,9 +3,9 @@
 <ol>
     {{#each meals}}
     <li>
-        <h1><a href="/meals/{{this.id}}">{{this.fullName}}</a></h1>
-        <h3>{{this.country}}</h3>
-        <p>{{this.bookTitle}}, {{this.publication_year}}</p>
+        <h1><a href="/meals/{{this.id}}">{{this.name}}</a></h1>
+        <h3>{{this.type}}</h3>
+        <p>{{this.calories}}, {{this.created_by}}</p>
     </li>
     {{/each}}
 </ol>
