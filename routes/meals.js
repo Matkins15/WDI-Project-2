@@ -26,6 +26,7 @@ router.post('/', function(req, res) {
           description: req.body.description,
           exampleMeal: req.body.exampleMeal,
           calories: req.body.calories,
+          image: req.body.image
     });
       newMeals.save();
       user.meals.push(newMeals);

@@ -1,15 +1,16 @@
 
 <h1>The Coders Digest</h1>
 
-<div class="userMeals">
+<div class="d-flex align-content-around flex-wrap">
 
-  <ol>
+  <ul>
       {{#each meals}}
       <li>
           <h1><a href="/users/{{../user.id}}/meals/{{this.id}}/edit">{{this.name}}</a></h1>
       </li>
       {{/each}}
-  </ol>
+  </ul>
+
 
   <form action="/users/{{user.id}}/meals/new">
     <input class="btn btn-default" type="submit" value="Create New Meal">

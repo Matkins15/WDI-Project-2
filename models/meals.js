@@ -8,6 +8,7 @@ var MealsSchema = new Schema({
     description: String,
     exampleMeal: String,
     calories: String,
+    image: String
 });
 
 MealsSchema.pre('save', function(next){

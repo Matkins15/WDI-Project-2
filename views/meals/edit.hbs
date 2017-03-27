@@ -8,8 +8,11 @@
 
 
         <h1><a href="/users/{{../user.id}}/meals/{{this.id}}/edit">{{this.name}}</a></h1>
+        <img src="{{this.image}}" width="200px">
+        <p>{{meals.description}}</p>
+        <p>Example Meal: {{meals.exampleMeal}}</p>
+        <p>Calories: {{meals.calories}}</p>
 
-      <p>{{this.description}}</p>  
 
       </div>
     <!-- <form action="/meals/{{meals.id}}?_method=PATCH" method="POST" class="col-md-6 col-md-offset-3">

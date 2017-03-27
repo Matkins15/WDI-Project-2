@@ -46,10 +46,6 @@ body {
   /*text-align: center;*/
 }
 
-.userMeal {
-  align-items: baseline;
-}
-
 a {
     color: #000;
 }
@@ -78,4 +74,8 @@ ol li {
 
 .btn.btn-default {
     margin-top: 50px;
+}
+
+.container-fluid {
+  width: auto;
 }
