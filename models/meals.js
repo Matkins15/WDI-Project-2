@@ -7,7 +7,7 @@ var MealsSchema = new Schema({
     name: String,
     description: String,
     exampleMeal: String,
-    calories: Number
+    calories: String,
 });
 
 MealsSchema.pre('save', function(next){

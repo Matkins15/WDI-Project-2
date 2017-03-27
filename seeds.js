@@ -12,7 +12,7 @@ Meals.remove({}, function(err) {
 var mealNumOne = new Meals({
     name: 'Breakfast',
     description: 'Break the overnight fast, curb your appetite and kick start your metabolism with a meal rich in protein, antioxidants, and complex carbohydrates.',
-    exampleMeal: '3 egg whites, 1 whole egg, 1/cup of oatmeal, and 1/2 cup of strawberries'
+    exampleMeal: '3 egg whites, 1 whole egg, 1/cup of oatmeal, and 1/2 cup of strawberries',
     calories: '300 - 500'
 });
 
