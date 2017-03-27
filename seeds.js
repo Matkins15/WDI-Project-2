@@ -1,24 +1,28 @@
 var mongoose = require('mongoose');
-// mongoose.connect('mongodb://localhost/WDI-project-2');
+mongoose.connect('mongodb://localhost/WDI-project-2');
 var Meals = require('./models/meals');
 var User = require('./models/users');
 
-mongoose.promise = global.Promise;
+mongoose.Promise = global.Promise;
 
 // Connect to database
-if (process.env.MONGODB_URI) {
-  mongoose.connect(process.env.MONGODB_URI);
-}
-else {
-  mongoose.connect('mongodb://localhost/WDI-project-2');
-}
-mongoose.connection.on('error', function(err) {
-  console.error('MongoDB connection error: ' + err);
-  process.exit(-1);
-  }
-);
+// if (process.env.MONGODB_URI) {
+//   mongoose.connect(process.env.MONGODB_URI);
+// }
+// else {
+//   mongoose.connect('mongodb://localhost/WDI-project-2');
+// }
+// mongoose.connection.on('error', function(err) {
+//   console.error('MongoDB connection error: ' + err);
+//   process.exit(-1);
+//   }
+// );
 mongoose.connection.once('open', function() {
   console.log("Mongoose has connected to MongoDB!");
+});
+
+Meals.remove({}, function(err) {
+    console.log(err);
 });
 
 var mealNumOne = new Meals({
@@ -29,9 +33,6 @@ var mealNumOne = new Meals({
     // image: 'https://source.unsplash.com/Q4qPu6hDdZA';
 });
 
-Meals.remove({}, function(err) {
-    console.log(err);
-});
 
 var mealNumTwo = new Meals({
     name: 'Lunch',

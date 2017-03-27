@@ -44,12 +44,15 @@
       {{#each meals}}
       <li>
           <h1><a href="/users/{{../user.id}}/meals/{{this.id}}/edit">{{this.name}}</a></h1>
-          <p>{{meals.description}}</p>
-          <p>{{meals.exampleMeal}}</p>
-          <p>{{meals.calories}}</p>
+          <p>{{this.description}}</p>
+          <p>{{this.exampleMeal}}</p>
+          <p>{{this.calories}}</p>
       </li>
       {{/each}}
   </ul>
+
+
+
 <hr>
 <br>
 
