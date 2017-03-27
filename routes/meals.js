@@ -28,8 +28,10 @@ var authHelpers = require('../helpers/auth.js');
 //       });
 // });
 
-
-
+router.get('/new', function(req, res, next) {
+  console.log(req.params.userId);
+  res.send('hey boys');
+});
 //===== CREATE MEALS ======================================
 router.post('/', function(req, res) {
   User.findById(req.params.userId)
@@ -47,27 +49,27 @@ router.post('/', function(req, res) {
       newMeals.save();
       user.meals.push(newMeals);
       user.save();
-      res.redirect('/users/${req.params.userId}');
+      res.redirect(`/users/${req.params.userId}`);
     });
 });
 
 //======== EDIT MEALS ====================================
 router.get('/:id/edit', function(req,res) {
-
+  console.log(req.params.userId);
     User.findById(req.params.userId)
     .exec(function(err, user) {
         if (err) {
           console.log(err);
         }
-    Meals.findById(req.params.id)
-      .exec(function(err, meals) {
+      Meals.findById(req.params.id)
+        .exec(function(err, meals) {
         if(err) {
           console.log(err);
         }
 
         res.render('meals/edit', {
             meals: meals,
-            user: user
+            userId: req.params.userId
           });
         });
     });
@@ -78,7 +80,7 @@ router.get('/:id/edit', function(req,res) {
 
 //create a PUT "/:id" route that saves the changes from the meals.
 router.put('/:id', function(req, res) {
-    Meals.findById(req.params.id)
+    Meals.findByIdAndUpdate(req.params.id)
         .exec(function(err, meals) {
             if (err) {
               console.log(err);
@@ -88,23 +90,27 @@ router.put('/:id', function(req, res) {
           meals.exampleMeal = req.body.exampleMeal;
           meals.calories = req.body.calories;
           meals.save();
-        });
-    User.findById(req.params.userId)
-        .exec(function(err, user) {
-            if (err) { console.log(err); }
-            var mealsToEdit = user.meals.id(req.params.id);
-            mealsToEdit.name = req.body.name;
-            mealsToEdit.description = req.body.description;
-            mealsToEdit.exampleMeal = req.body.exampleMeal;
-            mealsToEdit.calories = req.body.calories;
-            user.save();
+        // });
+        // var newMeal = meals;
+        // User.findById(req.params.userId)
+        //   .exec(function(err, user) {
+        //     if (err) { console.log(err); }
+        //     else if (!user) {console.log('route fucked');}
+        //     console.log(user.meals);
+        //     // var mealsToEdit = user.meals.id(req.params.id);
+        //     // mealsToEdit.name = req.body.name;
+        //     // mealsToEdit.description = req.body.description;
+        //     // mealsToEdit.exampleMeal = req.body.exampleMeal;
+        //     // mealsToEdit.calories = req.body.calories;
+        //     user.meals.push(newMeal);
+        //     user.save();
             res.redirect(`/users/${req.params.userId}`);
-        });
+      });
 });
 
 //========= DELETE MEALS =================================
 router.delete('/:id', function(req, res) {
-    Users.findByIdAndRemove(req.params.userId, {
+    User.findByIdAndRemove(req.params.userId, {
       $pull: {
         meals: {_id: req.params.id}
       }

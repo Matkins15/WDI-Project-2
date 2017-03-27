@@ -13,13 +13,13 @@
         <p>Example Meal: {{meals.exampleMeal}}</p>
         <p>Calories: {{meals.calories}}</p>
 
-
       </div>
       <hr>
       <h1>Switch it up. Edit your meal here...</h1>
+      <!-- <p>{{userId}}</p> -->
 
       <div class="row">
-          <form action="/users/{{user.id}}/meals/{{meals.id}}?_method=PUT" method="POST" class="col-md-6 col-md-6">
+          <form action="/users/{{userId}}/meals/{{meals.id}}?_method=PUT" method="POST" class="col-md-6 col-md-6">
               <div class="form-group">
                   <label for="name">Name:</label>
                   <input type="text" name="name" class="form-control">
@@ -41,7 +41,7 @@
               </div>
           </form>
 
-          <form action="/users/{{user.id}}/meals/{{meals.id}}?_method=DELETE" method="POST">
+          <form action="/users/{{userId}}/meals/{{meals.id}}?_method=DELETE" method="POST">
 	            <input class="btn btn-danger" type="submit" value="Delete This">
           </form>
       </div>

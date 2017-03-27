@@ -43,7 +43,7 @@
   <ul>
       {{#each meals}}
       <li>
-          <h1><a href="/users/{{../user.id}}/meals/{{this.id}}/edit">{{this.name}}</a></h1>
+          <h1><a href="/users/{{../userId}}/meals/{{this.id}}/edit">{{this.name}}</a></h1>
           <p>{{this.description}}</p>
           <p>{{this.exampleMeal}}</p>
           <p>{{this.calories}}</p>
@@ -60,7 +60,7 @@
 <div class="create">
   <h1>Create your Favorite Meal</h1>
   <div class="row">
-      <form action="/users/{{user.id}}/meals" method="POST">
+      <form action="/users/{{userId}}/meals" method="POST">
           <div class="form-group">
               <label for="name">Name: </label>
               <input type="text" name="name" class="form-control">
