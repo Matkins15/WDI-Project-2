@@ -3,10 +3,9 @@
 var express = require('express');
 var router = express.Router({mergeParams: true});
 var mongoose = require('mongoose');
-var authHelpers = require('../helpers/auth.js');
 var User = require('../models/users.js');
 var Meals = require('../models/meals.js');
-
+var authHelpers = require('../helpers/auth.js');
 //===== NEW MEALS ========================================
 // router.get('/new', function(req, res) {
 //

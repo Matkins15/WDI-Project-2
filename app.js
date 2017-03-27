@@ -9,14 +9,29 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var session = require('express-session');
 var methodOverride = require('method-override');
-var db = require('./db');
+// var db = require('./db');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
 
 var app = express();
 
-mongoose.connect('mongodb://localhost/WDI-project-2');
+// mongoose.connect('mongodb://localhost/WDI-project-2');
+// // Connect to database
+if (process.env.MONGODB_URI) {
+  mongoose.connect(process.env.MONGODB_URI);
+}
+else {
+  mongoose.connect('mongodb://localhost/WDI-project-2');
+}
+mongoose.connection.on('error', function(err) {
+  console.error('MongoDB connection error: ' + err);
+  process.exit(-1);
+  }
+);
+mongoose.connection.once('open', function() {
+  console.log("Mongoose has connected to MongoDB!");
+});
 
 //CONTROLLERS
 var indexControllers = require('./routes/index');
