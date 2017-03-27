@@ -3,12 +3,75 @@
 
 <div class="d-flex align-content-around flex-wrap">
 
-  <ul>
+
+  <div class="col col-md-6">
+    {{meals.0.name}}<br>
+    {{meals.0.description}}
+    <hr>
+    {{meals.0.exampleMeal}}
+    <hr>
+    {{meals.0.calories}}
+  </div>
+  <div class="col col-md-6">
+    {{meals.1.name}}<br>
+    {{meals.1.description}}
+    <hr>
+    {{meals.1.exampleMeal}}
+    <hr>
+    {{meals.1.calories}}
+  </div>
+  <div class="col col-md-6">
+    {{meals.2.name}}<br>
+    {{meals.2.description}}
+    <hr>
+    {{meals.2.exampleMeal}}
+    <hr>
+    {{meals.2.calories}}
+  </div>
+  <div class="col col-md-6">
+    {{meals.3.name}}<br>
+    {{meals.3.description}}
+    <hr>
+    {{meals.3.exampleMeal}}
+    <hr>
+    {{meals.3.calories}}
+  </div>
+  <br>
+</div>
+  <!-- <ul>
       {{#each meals}}
       <li>
           <h1><a href="/users/{{../user.id}}/meals/{{this.id}}/edit">{{this.name}}</a></h1>
       </li>
       {{/each}}
-  </ul>
+  </ul> -->
+<hr>
 
+
+
+<div class="create">
+  <h1>Create your Favorite Meal</h1>
+  <div class="row">
+      <form action="/users/{{user.id}}/meals" method="POST" class="col-md-6 col-md-offset-3">
+          <div class="form-group">
+              <label for="name">Name:</label>
+              <input type="text" name="name" class="form-control">
+          </div>
+          <div class="form-group">
+              <label for="description">Description:</label>
+              <input type="text" name="description" class="form-control">
+          </div>
+          <div class="form-group">
+              <label for="calories">Calories:</label>
+              <input type="text" name="country" class="form-control">
+          </div>
+          <div class="form-group">
+              <label for="exampleMeal">Meal:</label>
+              <input type="text" name="exampleMeal" class="form-control">
+          </div>
+          <div>
+              <input type="submit" value="Add to Meals" class="btn btn-primary">
+          </div>
+      </form>
+  </div>
 </div>
