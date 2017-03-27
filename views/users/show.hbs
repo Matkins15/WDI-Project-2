@@ -1,14 +1,18 @@
 
 <h1>The Coders Digest</h1>
 
-<ol>
-    {{#each meals}}
-    <li>
-        <h1><a href="/users/{{../user.id}}/meals/{{this.id}}/edit">{{this.name}}</a></h1>
-    </li>
-    {{/each}}
-</ol>
+<div class="userMeals">
 
-<form action="/users/{{user.id}}/meals/new">
-  <input class="btn btn-default" type="submit" value="Create New Meal">
-</form>
+  <ol>
+      {{#each meals}}
+      <li>
+          <h1><a href="/users/{{../user.id}}/meals/{{this.id}}/edit">{{this.name}}</a></h1>
+      </li>
+      {{/each}}
+  </ol>
+
+  <form action="/users/{{user.id}}/meals/new">
+    <input class="btn btn-default" type="submit" value="Create New Meal">
+  </form>
+
+</div>

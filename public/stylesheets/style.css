@@ -1,6 +1,7 @@
-/*html {
+html {
   margin: 0 auto;
-  padding: 0px;*/
+  padding: 0px;
+  text-align: center;
 }
 body {
   padding: 50px;
@@ -42,6 +43,7 @@ body {
 
 .btn-default {
   margin: 0 auto;
+  /*text-align: center;*/
 
 }
 

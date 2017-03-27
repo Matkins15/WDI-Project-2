@@ -1,8 +1,16 @@
-<h1>ffff</h1>
+<!-- <h1>ffff</h1>
 
 <div class="row">
-  <h4>"{{meals.description}}"</h4>
-    <form action="/meals/{{meals.id}}?_method=PATCH" method="POST" class="col-md-6 col-md-offset-3">
+  <h4>"{{meals.description}}"</h4> -->
+
+
+      <div class="container" index="mealNumOne">
+        <h1><a href="/meals/{{this.id}}">{{this.name}}</a></h1>
+
+        {{this.description}}
+
+      </div>
+    <!-- <form action="/meals/{{meals.id}}?_method=PATCH" method="POST" class="col-md-6 col-md-offset-3">
         <div class="form-group">
             <label for="name">Name:</label>
             <input type="text" name="name" value="{{meals.name}}" class="form-control">
@@ -21,13 +29,13 @@
         <div class="form-group">
             <label for="allergies">Allergies:</label>
             <input type="text" name="alleriges" value="{{meals.allergies}}" class="form-control">
-        </div>
+        </div> -->
 
-        <div>
+        <!-- <div>
             <input type="submit" value="Submit" class="btn btn-primary">
         </div>
     </form>
-</div>
+</div> -->
 
 <div>
     <!-- <a href="/meals/{{meals.id}}" class="btn btn-default">Back</a> -->
