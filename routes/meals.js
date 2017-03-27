@@ -9,10 +9,27 @@ var Meals = require('../models/meals.js');
 
 //===== NEW MEALS ========================================
 router.get('/new', function(req, res) {
-    res.render('meals/new', {
 
-    });
+      User.findById(req.params.userId)
+      .exec(function(err, user) {
+          if (err) {
+            console.log(err);
+          }
+      Meals.findById(req.params.id)
+        .exec(function(err, meals) {
+          if(err) {
+            console.log(err);
+          }
+
+          res.render('meals/new', {
+              meals: meals,
+              user: user
+          });
+      });
+      });
 });
+
+
 
 //===== CREATE MEALS ======================================
 router.post('/', function(req, res) {
@@ -60,7 +77,7 @@ router.get('/:id/edit', function(req,res) {
 
 //======== UPDATE ========================================
 
-//create a PUT "/:id" route that saves the changes from the restaurant.
+//create a PUT "/:id" route that saves the changes from the meals.
 router.put('/:id', function(req, res) {
     Meals.findById(req.params.id)
         .exec(function(err, meals) {
@@ -98,7 +115,7 @@ router.delete('/:id', function(req, res) {
             console.log(err);
           }
         });
-        Meals/findByIdAndRemove(req.params.id)
+        Meals.findByIdAndRemove(req.params.id)
         .exec(function(err, meals){
           if(err){
             console.log(err);
