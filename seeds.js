@@ -30,7 +30,7 @@ var mealNumOne = new Meals({
     description: 'Break the overnight fast, curb your appetite and kick start your metabolism with a meal rich in protein, antioxidants, and complex carbohydrates.',
     exampleMeal: '3 egg whites / 1 whole egg / 1 cup of oatmeal / 1/2 cup of strawberries',
     calories: '300 - 500',
-    // image: 'https://source.unsplash.com/Q4qPu6hDdZA';
+    imgURL: 'https://source.unsplash.com/m0YBwXQRdkg'
 });
 
 

@@ -1,12 +1,18 @@
 
 
-<div class="login-signup">
-  <h1>Welcome</h1>
-  <form action="/users/signup">
-    <input class="btn btn-default"  type="submit" value="SIGN UP">
-  </form>
+<div class="d-flex align-content-around flex-wrap">
+  <div class="col col-md-6">
+    {{meals.0.name}}<br>
+    {{meals.0.imgURL}}<br>
+  </div>
+  <div class="col col-md-6">
+    {{meals.1.name}}<br>
+  </div>
+  <div class="col col-md-6">
+    {{meals.2.name}}<br>
+  </div>
+  <div class="col col-md-6">
+    {{meals.3.name}}<br>
 
-  <form action="/sessions/login">
-    <input class="btn btn-default" type="submit" value="LOG IN">
-  </form>
+  </div>
 </div>
