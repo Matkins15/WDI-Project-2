@@ -1,11 +1,11 @@
 
 <h1>The Coders Digest</h1>
 
-<div class="d-flex align-content-around flex-wrap">
+<!-- <div class="d-flex align-content-around flex-wrap">
 
 
   <div class="col col-md-6">
-    {{meals.0.name}}<br>
+    <h3><a href="/users/{{../user.id}}/restaurants/{{this.id}}/edit">{{meals.0.name}}</a></h3><br>
     {{meals.0.description}}
     <hr>
     {{meals.0.exampleMeal}}
@@ -37,36 +37,41 @@
     {{meals.3.calories}}
   </div>
   <br>
-</div>
-  <!-- <ul>
+</div> -->
+
+
+  <ul>
       {{#each meals}}
       <li>
           <h1><a href="/users/{{../user.id}}/meals/{{this.id}}/edit">{{this.name}}</a></h1>
+          <p>{{meals.description}}</p>
+          <p>{{meals.exampleMeal}}</p>
+          <p>{{meals.calories}}</p>
       </li>
       {{/each}}
-  </ul> -->
+  </ul>
 <hr>
-
+<br>
 
 
 <div class="create">
   <h1>Create your Favorite Meal</h1>
   <div class="row">
-      <form action="/users/{{user.id}}/meals" method="POST" class="col-md-6 col-md-offset-3">
+      <form action="/users/{{user.id}}/meals" method="POST">
           <div class="form-group">
-              <label for="name">Name:</label>
+              <label for="name">Name: </label>
               <input type="text" name="name" class="form-control">
           </div>
           <div class="form-group">
-              <label for="description">Description:</label>
+              <label for="description">Description: </label>
               <input type="text" name="description" class="form-control">
           </div>
           <div class="form-group">
-              <label for="calories">Calories:</label>
+              <label for="calories">Calories: </label>
               <input type="text" name="country" class="form-control">
           </div>
           <div class="form-group">
-              <label for="exampleMeal">Meal:</label>
+              <label for="exampleMeal">Meal: </label>
               <input type="text" name="exampleMeal" class="form-control">
           </div>
           <div>

@@ -79,6 +79,6 @@ ol li {
 .container-fluid {
   width: auto;
 }
-.create {
-  margin-top: 200px;
+.create h1 {
+  text-align: center;
 }

@@ -8,26 +8,26 @@ var User = require('../models/users.js');
 var Meals = require('../models/meals.js');
 
 //===== NEW MEALS ========================================
-router.get('/new', function(req, res) {
-
-      User.findById(req.params.userId)
-      .exec(function(err, user) {
-          if (err) {
-            console.log(err);
-          }
-      Meals.findById(req.params.id)
-        .exec(function(err, meals) {
-          if(err) {
-            console.log(err);
-          }
-
-          res.render('meals/new', {
-              meals: meals,
-              user: user
-          });
-      });
-      });
-});
+// router.get('/new', function(req, res) {
+//
+//       User.findById(req.params.userId)
+//       .exec(function(err, user) {
+//           if (err) {
+//             console.log(err);
+//           }
+//       Meals.findById(req.params.id)
+//         .exec(function(err, meals) {
+//           if(err) {
+//             console.log(err);
+//           }
+//
+//           res.render('meals/new', {
+//               meals: meals,
+//               user: user
+//           });
+//       });
+//       });
+// });
 
 
 
@@ -48,7 +48,7 @@ router.post('/', function(req, res) {
       newMeals.save();
       user.meals.push(newMeals);
       user.save();
-      res.redirect('/user${req.params.userdId}');
+      res.redirect('/users/${req.params.userId}');
     });
 });
 
