@@ -10,15 +10,7 @@ body {
   /*margin: 0px;*/
 }
 
-.navbar {
-    line-height: 100px;
-    height: 100px;
-    padding-top: 0;
-    background-color: white;
-    loat: none;
-    vertical-align: top;
-    border: solid;
-}
+
 
 .navbar-header {
   transform: translateX(-50%);
@@ -36,6 +28,15 @@ body {
     margin: auto;
 }
 
+.navbar {
+    line-height: 100px;
+    height: 100px;
+    padding-top: 0;
+    background-color: white;
+    loat: none;
+    vertical-align: top;
+    border: solid;
+}
 .bg-homepage {
   background-image: url('https://source.unsplash.com/Q4qPu6hDdZA');
   background-size: 100% 100%;
