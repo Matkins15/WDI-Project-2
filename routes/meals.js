@@ -82,17 +82,18 @@ router.delete('/:id', function(req, res) {
   User.findByIdAndRemove(req.params.userId, {
     $pull: {
       meals: {_id: req.params.id}
-    }
-  })
-    .exec(function(err, author) {
+      }
+    })
+    .exec(function(err, user) {
+      user.meals.remove(mealId)
       if (err) { return console.log(err); }
     });
 
-  Meal.findByIdAndRemove(req.params.id)
-    .exec(function(err, meals){
-      if (err) { return console.log(err); }
-      res.redirect(`/users/${req.params.userId}`);
-    });
+  // Meal.findByIdAndRemove(req.params.id)
+  //   .exec(function(err, meals){
+  //     if (err) { return console.log(err); }
+  //     res.redirect(`/users/${req.params.userId}`);
+  //   });
 });
 
 //====== EXPORTS ===========================================
