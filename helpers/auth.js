@@ -14,6 +14,7 @@ function loginUser(req, res, next) {
 
   User.findOne({email: email})
   .then(function(foundUser){
+    // if (err) {console.log(err);}
     if (foundUser == null) {
       res.json({status: 401, data: "unauthorized"});
 

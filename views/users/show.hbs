@@ -1,65 +1,37 @@
 
 <h1>The Coders Digest</h1>
 
-<!-- <div class="d-flex align-content-around flex-wrap">
+  <!-- Default/Seeded Meals -->
+    <ul>
+        {{#each universalMeals}}
+        <li>
+            <h1><a href="/users/{{../userId}}/meals/{{this.id}}/edit">{{this.name}}</a></h1>
+            <img src="{{this.imgURL}}" width="350px" alt="">
+            <p>{{this.description}}</p>
+            <p>Meal: {{this.exampleMeal}}</p>
+            <p>Calories: {{this.calories}}</p>
+        </li>
+        {{/each}}
+    </ul>
 
+    <!-- Added User Meals -->
+    <ul>
 
-  <div class="col col-md-6">
-    <h3><a href="/users/{{../user.id}}/restaurants/{{this.id}}/edit">{{meals.0.name}}</a></h3><br>
-    {{meals.0.description}}
-    <hr>
-    {{meals.0.exampleMeal}}
-    <hr>
-    {{meals.0.calories}}
-  </div>
-  <div class="col col-md-6">
-    {{meals.1.name}}<br>
-    {{meals.1.description}}
-    <hr>
-    {{meals.1.exampleMeal}}
-    <hr>
-    {{meals.1.calories}}
-  </div>
-  <div class="col col-md-6">
-    {{meals.2.name}}<br>
-    {{meals.2.description}}
-    <hr>
-    {{meals.2.exampleMeal}}
-    <hr>
-    {{meals.2.calories}}
-  </div>
-  <div class="col col-md-6">
-    {{meals.3.name}}<br>
-    {{meals.3.description}}
-    <hr>
-    {{meals.3.exampleMeal}}
-    <hr>
-    {{meals.3.calories}}
-  </div>
-  <br>
-</div> -->
+        {{#each user.meals}}
+        <li>
+            <h1><a href="/users/{{../userId}}/meals/{{this.id}}/edit">{{this.name}}</a></h1>
+            <img src="{{this.imgURL}}" width="350px" alt="">
+            <p>{{this.description}}</p>
+            <p>Meal: {{this.exampleMeal}}</p>
+            <p>Calories: {{this.calories}}</p>
+        </li>
+        {{/each}}
 
-
-  <ul>
-      {{#each meals}}
-      <li>
-          <h1><a href="/users/{{../userId}}/meals/{{this.id}}/edit">{{this.name}}</a></h1>
-        <img src="{{this.imgURL}}" width="400px" alt="">
-          <p>{{this.description}}</p>
-          <p>{{this.exampleMeal}}</p>
-          <p>{{this.calories}}</p>
-      </li>
-      {{/each}}
-  </ul>
-
-
-
+    </ul>
 <hr>
-<br>
-
 
 <div class="create">
-  <h1>Create your Favorite Meal</h1>
+  <h1>Create your new meal here!</h1>
   <div class="row">
       <form action="/users/{{userId}}/meals" method="POST">
           <div class="form-group">

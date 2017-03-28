@@ -27,6 +27,10 @@ body {
     margin: auto;
 }
 
+.carousel-caption {
+
+}
+
 .navbar {
     line-height: 100px;
     height: 100px;
@@ -99,9 +103,15 @@ ol li {
 .container-fluid {
   width: auto;
 }
+
 .create h1 {
   text-align: center;
 }
+
 .loginPage {
   align-items: center;
+}
+
+.meals {
+  width: 500px;
 }
