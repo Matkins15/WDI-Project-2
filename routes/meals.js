@@ -79,13 +79,12 @@ router.put('/:id', function(req, res) {
 
 //========= DELETE MEALS =================================
 router.delete('/:id', function(req, res) {
-  User.findByIdAndRemove(req.params.userId, {
+  User.findByIdAndUpdate(req.params.userId, {
     $pull: {
       meals: {_id: req.params.id}
       }
     })
     .exec(function(err, user) {
-      user.meals.remove(mealId)
       if (err) { return console.log(err); }
     });
 
