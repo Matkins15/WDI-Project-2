@@ -44,7 +44,7 @@ router.post('/', function(req, res) {
           description: req.body.description,
           exampleMeal: req.body.exampleMeal,
           calories: req.body.calories,
-          image: req.body.image
+          imgURL: req.body.imgURL
     });
       newMeals.save();
       user.meals.push(newMeals);
@@ -89,6 +89,7 @@ router.put('/:id', function(req, res) {
           meals.description = req.body.description;
           meals.exampleMeal = req.body.exampleMeal;
           meals.calories = req.body.calories;
+          meals.imgURL = req.body.imgURL;
           meals.save();
         // });
         // var newMeal = meals;

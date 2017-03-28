@@ -44,6 +44,7 @@
       {{#each meals}}
       <li>
           <h1><a href="/users/{{../userId}}/meals/{{this.id}}/edit">{{this.name}}</a></h1>
+          {{this.imgURL}}
           <p>{{this.description}}</p>
           <p>{{this.exampleMeal}}</p>
           <p>{{this.calories}}</p>

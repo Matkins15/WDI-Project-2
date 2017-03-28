@@ -8,7 +8,7 @@ var MealsSchema = new Schema({
     description: String,
     exampleMeal: String,
     calories: String,
-    image: String
+    imgURL: String
 });
 
 var UsersSchema = new Schema({
