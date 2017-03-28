@@ -39,6 +39,7 @@ var mealNumTwo = new Meals({
     description: 'Ever tried coding on an empty stomach? No bueno. Provide your body and mind the nourishments it needs to perform at an optimum level.',
     exampleMeal: '4oz salmon / 1/2 cup cooked brown rice / 1 cup of brocolli',
     calories: '400 - 600',
+    imgURL: 'https://source.unsplash.com/lQy6mHZ7fYk'
 });
 
 var mealNumThree = new Meals({
@@ -46,6 +47,7 @@ var mealNumThree = new Meals({
     description: 'Want to help prevent a bad nights sleep? Eat Dinner! This important meal will steady the release of glucose into your blood stream preventing disturbance in your sleep.',
     exampleMeal: '6oz of chicken / 1 cup cubed sweet potatoes / 2 cups spinach',
     calories: '400 - 600',
+    imgURL: 'https://source.unsplash.com/0VRwj7rYnQI'
 });
 
 var mealNumFour = new Meals({
@@ -53,6 +55,7 @@ var mealNumFour = new Meals({
     description: '"Snacking" helps to prevent yourself from overeating during your next meal.',
     exampleMeal: 'Apple with 2 Tbs of peanut butter OR 1 serving of nuts OR carrots with 2-3 Tbs of hummus ',
     calories: '200 - 300',
+    imgURL: 'https://source.unsplash.com/evsoUV1EyXY'
 });
 
 mealNumOne.save(function(err) {
