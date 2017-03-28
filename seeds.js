@@ -58,26 +58,26 @@ Meals.remove({}, function(err) {
 //     imgURL: 'https://source.unsplash.com/evsoUV1EyXY'
 // });
 
-mealNumOne.save(function(err) {
-  if (err) console.log(err);
-
-  console.log('mealNumOne created!');
-});
-
-mealNumTwo.save(function(err) {
-  if (err) console.log(err);
-
-  console.log('mealNumTwo created!');
-});
-
-mealNumThree.save(function(err) {
-  if (err) console.log(err);
-
-  console.log('mealNumThree created!');
-});
-
-mealNumFour.save(function(err) {
-  if (err) console.log(err);
-
-  console.log('mealNumFour created!');
-});
+// mealNumOne.save(function(err) {
+//   if (err) console.log(err);
+//
+//   console.log('mealNumOne created!');
+// });
+//
+// mealNumTwo.save(function(err) {
+//   if (err) console.log(err);
+//
+//   console.log('mealNumTwo created!');
+// });
+//
+// mealNumThree.save(function(err) {
+//   if (err) console.log(err);
+//
+//   console.log('mealNumThree created!');
+// });
+//
+// mealNumFour.save(function(err) {
+//   if (err) console.log(err);
+//
+//   console.log('mealNumFour created!');
+// });

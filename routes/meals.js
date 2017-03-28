@@ -89,12 +89,28 @@ router.delete('/:id', function(req, res) {
       if (err) { return console.log(err); }
     });
 
-  // Meal.findByIdAndRemove(req.params.id)
-  //   .exec(function(err, meals){
-  //     if (err) { return console.log(err); }
-  //     res.redirect(`/users/${req.params.userId}`);
-  //   });
+  Meal.findByIdAndRemove(req.params.id)
+    .exec(function(err, meals){
+      if (err) { return console.log(err); }
+      res.redirect(`/users/${req.params.userId}`);
+    });
 });
+
+
+// router.delete('/:id', function deleteCurrentMeal(req, res) {
+//   User.findById(req.params.userId)
+//     .exec(function (err, user){
+//       if (err) { console.log(err); }
+//       user.meals.id(req.params.id).remove();
+//       user.save(function (err) {
+//         if (err) console.log(err);
+//         // console.log('Meal was removed')
+//         res.redirect(`/users/${req.params.userId}`)
+//       });
+//       // res.render('project_ideas/index', {
+//       //   user: user
+//       });
+//     });
 
 //====== EXPORTS ===========================================
 module.exports = router;
