@@ -28,12 +28,12 @@ The Conscious Foodie is a meal plan application. Users will have the ability to 
 ## Wireframes
 ### Initial Sketches
 
-![Wireframe #1](WDI-Project-2/public/images/WireFrame #1.JPG)
+![Wireframe #1](https://github.com/Matkins15/WDI-Project-2/blob/master/public/images/WireFrame%20%231.JPG)
 
-![Wireframe #2](WDI-Project-2/public/images/WireFrame #2.JPG)
+![Wireframe #2](https://github.com/Matkins15/WDI-Project-2/blob/master/public/images/WireFrame%20%232.JPG)
 
 ## ERD 
-![ERD](WDI-Project-2/public/images/ERD .JPG)
+![ERD](https://github.com/Matkins15/WDI-Project-2/blob/master/public/images/ERD%20.JPG)
 
 User = { firstName: String, lastName: String, email: String, password_digest: String, age: Number, weigth: Number, meals: [MealsSchema], created_at: Date, updated_at: Date }
 
