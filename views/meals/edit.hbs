@@ -1,7 +1,7 @@
-<div class="w3-container">
+<div class="container">
       <div class="container-fluid" index="mealNumOne">
         <h1><a href="/users/{{../user.id}}/meals/{{this.id}}/edit">{{meal.name}}</a></h1>
-        <img src="{{meal.imgURL}}" width="200px">
+        <img src="{{meal.imgURL}}" width="200px"><br><br><br>
         <p>{{meal.description}}</p>
         <p>Example Meal: {{meal.exampleMeal}}</p>
         <p>Calories: {{meal.calories}}</p>
@@ -10,8 +10,8 @@
       <h1>Switch it up, edit your meal below....</h1>
       <!-- <p>{{userId}}</p> -->
 
-      <div class="row">
-          <form action="/users/{{userId}}/meals/{{meal.id}}?_method=PUT" method="POST" class="col-md-6 col-md-6">
+      <div class="row container container-form">
+          <form action="/users/{{userId}}/meals/{{meal.id}}?_method=PUT" method="POST">
               <div class="form-group">
                   <label for="name">Name:</label>
                   <input type="text" name="name" class="form-control">
