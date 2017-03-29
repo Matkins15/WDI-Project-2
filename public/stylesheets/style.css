@@ -44,7 +44,6 @@ body {
 }
 .navbar {
     line-height: 100px;
-    height: 100px;
     padding-top: 0;
     loat: none;
     vertical-align: middle;
@@ -227,9 +226,10 @@ span.psw {
 footer {
   height: 100px;
   background-color: #E3E4E8;
+  padding: 10px 0px 0px 0px;
 }
 
-.footer p {
-  margin: 0 auto;
-  padding: 0px;
+.fa {
+  font-size: 36px;
+  padding: 10px;
 }
