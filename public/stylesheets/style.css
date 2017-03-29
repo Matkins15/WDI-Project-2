@@ -10,8 +10,10 @@ body {
   text-align: center;
   margin: 0 auto;
   padding: 0px;
+}
+#enterHomepage {
+  border: none;
 
-  /*margin: 0px;*/
 }
 
 #mealNumOne {
@@ -143,7 +145,7 @@ element.style {
 
 /* Bordered form */
 form {
-    border: 3px solid #f1f1f1;
+
     margin: auto;
     width: 50%;
 }
@@ -220,4 +222,14 @@ span.psw {
   align: center;
   text-align: center;
   width: 100% !important;
+}
+
+footer {
+  height: 100px;
+  background-color: #E3E4E8;
+}
+
+.footer p {
+  margin: 0 auto;
+  padding: 0px;
 }
