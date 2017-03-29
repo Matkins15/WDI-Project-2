@@ -40,29 +40,29 @@
     <span class="psw">Forgot <a href="#">password?</a></span>
   </div>
 </form> -->
+<div class="container loginPage">
+  <form action="/sessions/login" method="post">
+    <div class="header">
+      <h2>Welcome Back!</h2>
+    </div>
 
+    <div>
+      <label for="email">email</label>
+      <input type="text" placeholder="Enter Email" name="email">
+    </div>
 
-<form action="/sessions/login" method="post">
-  <div class="header">
-    <h2>Welcome Back!</h2>
-  </div>
+    <div>
+      <label for="password">password</label>
+      <input type="password" placeholder="Enter Password" name="password">
+    </div>
+    <div >
+      <button type="submit">Login</button>
+      <input type="checkbox" checked="checked"> Remember me
+    </div>
 
-  <div>
-    <label for="email">email</label>
-    <input type="text" placeholder="Enter Email" name="email">
-  </div>
-
-  <div>
-    <label for="password">password</label>
-    <input type="password" placeholder="Enter Password" name="password">
-  </div>
-  <div >
-    <button type="submit">Login</button>
-    <input type="checkbox" checked="checked"> Remember me
-  </div>
-
-  <div class="container" style="background-color:#f1f1f1">
-    <button type="button" class="cancelbtn">Cancel</button>
-    <span class="psw">Forgot <a href="#">password?</a></span>
-  </div>
-</form>
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>

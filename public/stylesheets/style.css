@@ -2,21 +2,24 @@ html {
   margin: 0 auto;
   padding: 0px;
   text-align: center;
-  font-family: 'Rock Salt', cursive;
+
 }
 body {
   /*padding: 50px;*/
-  font-family: 'Rock Salt', cursive;
+  font-family: 'Nothing You Could Do', cursive;
   text-align: center;
   /*margin: 0px;*/
+}
 
+#mealNumOne {
+  font-weight: bold;
+  font-size: 36px;
 }
 
 .navbar-header {
   transform: translateX(-50%);
   left: 50%;
   position: absolute;
-
 }
 
 .d-flex {
@@ -63,9 +66,12 @@ body {
   height: 500px;*/
   background-color: grey;
   margin: 0 auto;
-  width: 400px;
-  height: 400px;
+  width: 100px;
+  height: 200px;
   margin-top: 100px;
+}
+.col-md.6{
+  height: 500px;
 }
 
 .btn-default {
@@ -123,9 +129,17 @@ w3-container {
   width: 100%
 }
 
+element.style {
+    background-color: #f1f1f1;
+    margin: auto;
+    width: 50%;
+}
+
 /* Bordered form */
 form {
     border: 3px solid #f1f1f1;
+    margin: auto;
+    width: 50%;
 }
 
 /* Full-width inputs */
