@@ -81,10 +81,14 @@ body {
   margin: auto;
   width: 50%;
 }
-/*#cancel {
-  padding: 0px;
-  width: 50%;
-}*/
+.aboutSection {
+  height: 100px;
+  font-weight: bold;
+  font-size: 36px;
+  text-align: center;
+  font-family: 'Nothing You Could Do', cursive;
+  margin: 20px;
+}
 
 .btn-default {
   margin: 0 auto;
