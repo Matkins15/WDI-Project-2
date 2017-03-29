@@ -78,7 +78,10 @@ body {
   height: 500px;
   margin: auto;
   width: 50%;
-
+}
+#cancel {
+  padding: 0px;
+  width: 50%;
 }
 
 .btn-default {
