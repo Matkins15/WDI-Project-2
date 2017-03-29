@@ -2,11 +2,13 @@
 <h1>The Coders Digest</h1>
 
   <!-- Default/Seeded Meals -->
+  <div class="container">
+
     <ul>
         {{#each universalMeals}}
         <li>
             <h1><a href="/users/{{../userId}}/meals/{{this.id}}/edit">{{this.name}}</a></h1>
-            <img src="{{this.imgURL}}" width="350px" alt="">
+            <img src="{{this.imgURL}}" width="350px" alt=""><br><br>
             <p>{{this.description}}</p>
             <p>Meal: {{this.exampleMeal}}</p>
             <p>Calories: {{this.calories}}</p>
@@ -20,7 +22,7 @@
         {{#each user.meals}}
         <li>
             <h1><a href="/users/{{../userId}}/meals/{{this.id}}/edit">{{this.name}}</a></h1>
-            <img src="{{this.imgURL}}" width="350px" alt="">
+            <img src="{{this.imgURL}}" width="350px" alt=""><br><br>
             <p>{{this.description}}</p>
             <p>Meal: {{this.exampleMeal}}</p>
             <p>Calories: {{this.calories}}</p>
@@ -29,7 +31,7 @@
 
     </ul>
 <hr>
-
+</div>
 <div class="create">
   <h1>Create your new meal here!</h1>
   <div class="row">

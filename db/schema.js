@@ -33,7 +33,6 @@ UsersSchema.pre('save', function(next) {
         imgURL: 'https://source.unsplash.com/m0YBwXQRdkg'
     };
 
-
     var mealNumTwo = {
         name: 'Lunch',
         description: 'Ever tried coding on an empty stomach? No bueno. Provide your body and mind the nourishments it needs to perform at an optimum level.',

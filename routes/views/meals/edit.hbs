@@ -1,5 +1,5 @@
-<div class="w3-container">
-      <div class="container-fluid" index="mealNumOne">
+
+      <div class="container fluid" index="mealNumOne">
         <h1><a href="/users/{{../user.id}}/meals/{{this.id}}/edit">{{meal.name}}</a></h1>
         <img src="{{meal.imgURL}}" width="200px">
         <p>{{meal.description}}</p>
@@ -7,7 +7,7 @@
         <p>Calories: {{meal.calories}}</p>
       </div>
 
-      <h1>Switch it up, edit your meal below....</h1>
+      <h1>Change it up. Edit your meal here...</h1>
       <!-- <p>{{userId}}</p> -->
 
       <div class="row">
@@ -41,8 +41,7 @@
 	            <input class="btn btn-danger" type="submit" value="Delete This">
           </form>
       </div>
-      <div>
-          <!-- <a href="/meals/{{meal.id}}" class="btn btn-default">Back</a> -->
-          <a href="/users/show" class="btn btn-default">Main Page</a>
-      </div>
+<div>
+    <!-- <a href="/meals/{{meal.id}}" class="btn btn-default">Back</a> -->
+    <a href="/users/show" class="btn btn-default">Main Page</a>
 </div>
