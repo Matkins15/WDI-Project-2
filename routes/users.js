@@ -6,16 +6,7 @@ var Meal = require('../models/meals.js');
 
 //======= MEALS INDEX ==============================================
 router.get('/', function(req, res, next) {
-  Meal.find({})
-    .exec(function(err, meals){
-      if(err){
-        console.log(err);
-      };
-      console.log(meals);
-      res.render('users/index', {
-        meals: meals
-      });
-    });
+      res.render('users/index');
 });
 
 //====== SIGN UP PAGE ==============================================

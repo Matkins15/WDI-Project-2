@@ -14,13 +14,14 @@ router.post('/', function(req, res) {
       if(err) {
         console.log(err);
       }
-      var newMeal = new Meal({
+      var newMeal = {
           name: req.body.name,
           description: req.body.description,
           exampleMeal: req.body.exampleMeal,
           calories: req.body.calories,
           imgURL: req.body.imgURL
-      });
+      };
+
       // newMeal.save();
       user.meals.push(newMeal);
       user.save();

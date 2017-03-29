@@ -6,7 +6,7 @@ var Meals = require('../models/meals.js');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', {layout:false});
+  res.render('index', {layout: false});
 });
 
 module.exports = router;

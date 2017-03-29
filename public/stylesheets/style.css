@@ -25,6 +25,7 @@ body {
   transform: translateX(-50%);
   left: 50%;
   position: absolute;
+  font-family: 'Nothing You Could Do', cursive;
 }
 
 .d-flex {
@@ -47,6 +48,7 @@ body {
     padding-top: 0;
     loat: none;
     vertical-align: middle;
+    font-family: 'Nothing You Could Do', cursive;
 }
 .bg-homepage {
   background-image: url('https://source.unsplash.com/KYBzqPuif5w');
@@ -79,10 +81,10 @@ body {
   margin: auto;
   width: 50%;
 }
-#cancel {
+/*#cancel {
   padding: 0px;
   width: 50%;
-}
+}*/
 
 .btn-default {
   margin: 0 auto;

@@ -90,7 +90,7 @@ UsersSchema.pre('save', function(next) {
   next();
 });
 
-var MealsModel = mongoose.model('Meals', MealsSchema);
+var MealsModel = mongoose.model('Meal', MealsSchema);
 var UserModel = mongoose.model('User', UsersSchema);
 
 
