@@ -38,7 +38,6 @@ function authorized(req, res, next) {
 };
 
 //Export this function below:
-
 module.exports = {
   createSecure: createSecure,
   loginUser: loginUser,

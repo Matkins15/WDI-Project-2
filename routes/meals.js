@@ -36,15 +36,7 @@ router.get('/:id/edit', function(req,res) {
       if (err) {console.log(err); }
 
       var mealToEdit = user.meals.id(req.params.id);
-      // var meal = user.meals.find(function (meal) {
-      //   return meal.id = mealToEdit;
-      // });
-      //   meal.name = req.body.name;
-      //   meal.description = req.body.description;
-      //   meal.exampleMeal = req.body.exampleMeal;
-      //   meal.calories = req.body.calories;
-      // // user.meals.push(newMeal);
-      // user.save();
+
       res.render('meals/edit', {
         meal: mealToEdit,
         userId: req.params.userId
@@ -63,10 +55,6 @@ router.put('/:id', function(req, res) {
             else if (!user) {console.log('route fucked');}
             console.log(user.meals);
             var editedMeal = user.meals.id(req.params.id);
-            // var thisMeal = req.params.id;
-            // var meal = user.meals.find(function (meal) {
-            //   return meal.id = thisMeal;
-            // });
               editedMeal.name = req.body.name;
               editedMeal.imgURL = req.body.imgURL;
               editedMeal.description = req.body.description;
@@ -95,22 +83,6 @@ router.delete('/:id', function(req, res) {
       res.redirect(`/users/${req.params.userId}`);
     });
 });
-
-
-// router.delete('/:id', function deleteCurrentMeal(req, res) {
-//   User.findById(req.params.userId)
-//     .exec(function (err, user){
-//       if (err) { console.log(err); }
-//       user.meals.id(req.params.id).remove();
-//       user.save(function (err) {
-//         if (err) console.log(err);
-//         // console.log('Meal was removed')
-//         res.redirect(`/users/${req.params.userId}`)
-//       });
-//       // res.render('project_ideas/index', {
-//       //   user: user
-//       });
-//     });
 
 //====== EXPORTS ===========================================
 module.exports = router;
