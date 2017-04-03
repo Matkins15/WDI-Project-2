@@ -23,7 +23,7 @@ The Conscious Foodie is a meal plan application. Users will have the ability to 
 
 ## Portfolio
 
-+ [Portfolio Website](https://matkins15.github.io/Matt-Portfolio/)
++ [Portfolio Website](https://matkins15.github.io/Matkins-Portfolio/)
 
 ## Wireframes
 ### Initial Sketches
