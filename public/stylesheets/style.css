@@ -30,6 +30,7 @@ body {
 }
 
 div.container-fluid {
+    font-family: 'Cabin', sans-serif;
     display: flex;
     align-items: center;
     width: 100%;
