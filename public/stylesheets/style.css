@@ -2,13 +2,13 @@ html {
   margin: 0 auto;
   padding: 0px;
   text-align: center;
-
 }
+
 body {
-  font-family: 'Vollkorn', serif;
-  text-align: center;
-  margin: 0 auto;
-  padding: 0px;
+    font-family: 'Cabin', sans-serif;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0px;
 }
 
 .bg-homepage {
@@ -77,12 +77,20 @@ ul.nav.navbar-right {
   width: 50%;
 }
 .aboutSection {
-  height: 100px;
-  font-weight: bold;
-  font-size: 36px;
-  text-align: center;
-  font-family: 'Nothing You Could Do', cursive;
-  margin: 20px;
+    height: 100px;
+    font-weight: bold;
+    font-size: 36px;
+    text-align: center;
+    font-family: 'Nothing You Could Do', cursive;
+    margin: 20px;
+}
+
+footer {
+    position:absolute;
+    width:100%;
+    height: 100px;
+    background-color: #E3E4E8;
+    padding: 10px 0px 0px 0px;
 }
 
 .btn-default {
@@ -226,11 +234,6 @@ span.psw {
   width: 100% !important;
 }
 
-footer {
-  height: 100px;
-  background-color: #E3E4E8;
-  padding: 10px 0px 0px 0px;
-}
 
 .fa {
   font-size: 36px;
