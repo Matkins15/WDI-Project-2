@@ -122,7 +122,7 @@ ol li {
 }
 
 .btn.btn-primary, .btn.btn-danger {
-    margin-top: 20px;
+    margin: 20px
 }
 
 .btn.btn-default {
@@ -139,6 +139,11 @@ ol li {
 
 .loginPage {
   align-items: center;
+}
+
+.mealTitle {
+    font-family: 'Nothing You Could Do', cursive;
+    font-size: 56px;
 }
 
 .meals {
