@@ -39,6 +39,9 @@ div.container-fluid {
 ul.nav.navbar-right {
     display: inline-flex;
     margin-left: auto;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: .2em;
 }
 
 .d-flex {
@@ -137,6 +140,16 @@ ol li {
   text-align: center;
 }
 
+/*.signUpButton {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}*/
+
 .loginPage {
   align-items: center;
 }
@@ -177,7 +190,7 @@ input[type=text], input[type=password] {
 }
 
 /* Set a style for all buttons */
-button {
+button, .signUpButton {
     background-color: #4CAF50;
     color: white;
     padding: 14px 20px;
