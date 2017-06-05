@@ -13,9 +13,11 @@ body {
 
 .bg-homepage {
   background-image: url('https://source.unsplash.com/KYBzqPuif5w');
-  background-size: 100% 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   width: 100%;
-  height: 650px;
+  height: 100vh;
   z-index: 0;
   padding: 0;
 }
