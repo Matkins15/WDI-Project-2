@@ -12,7 +12,7 @@ body {
 }
 
 .bg-homepage {
-  background-image: url('https://source.unsplash.com/KYBzqPuif5w');
+  background-image: url('https://source.unsplash.com/-HtLnW28fok');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -132,7 +132,8 @@ ol li {
 }
 
 .btn.btn-default {
-    margin-top: 50px;
+    margin-top: 10px;
+    font-family: 'Cabin', sans-serif;
 }
 
 .container-fluid {
