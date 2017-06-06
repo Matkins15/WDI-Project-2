@@ -1,15 +1,20 @@
 html {
-  margin: 0 auto;
-  padding: 0px;
-  text-align: center;
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    position: static;
 }
 
 body {
     font-family: 'Cabin', sans-serif;
     text-align: center;
-    margin: 0 auto;
+    margin: 0px;
     padding: 0px;
+    height: 100%;
+    position: static;
 }
+
 
 .bg-homepage {
   background-image: url('https://source.unsplash.com/-HtLnW28fok');
@@ -22,8 +27,14 @@ body {
   padding: 0;
 }
 
-#enterHomepage {
-  width: 200px;
+.text-homepage, .text-homepage h1 {
+    margin: 0 auto;
+    font-family: 'Nothing You Could Do', cursive;
+    text-align: center;
+    color: #fff;
+    font-size: 64px;
+    vertical-align: middle;
+    padding-top: 20vh;
 }
 
 #mealNumOne {
@@ -31,11 +42,19 @@ body {
   font-size: 36px;
 }
 
-div.container-fluid {
+.navbar {
     font-family: 'Cabin', sans-serif;
-    display: flex;
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 10px;
     align-items: center;
     width: 100%;
+}
+
+.nav.navbar-left {
+    font-size: 18px;
+    align-items: center;
 }
 
 ul.nav.navbar-right {
@@ -62,13 +81,6 @@ ul.nav.navbar-right {
   width: 100%;
 }
 
-.text-homepage, .text-homepage h1 {
-    margin: 0 auto;
-    font-family: 'Nothing You Could Do', cursive;
-    /*text-align: center;*/
-    color: #fff;
-    font-size: 56px;
-}
 
 .login-signup {
   display: flex;
@@ -89,15 +101,17 @@ ul.nav.navbar-right {
     font-size: 36px;
     text-align: center;
     font-family: 'Nothing You Could Do', cursive;
-    margin: 20px;
+    margin: 0 auto;
+    width: 50%;
 }
 
-footer {
-    position:absolute;
+.footer {
+    position: relative;
     width:100%;
     height: 100px;
     background-color: #E3E4E8;
     padding: 10px 0px 0px 0px;
+    bottom: 0px;
 }
 
 .btn-default {
