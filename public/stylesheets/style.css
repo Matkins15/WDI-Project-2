@@ -83,6 +83,9 @@ ul.nav.navbar-right {
   width: 100%;
 }
 
+div.container.loginPage {
+    padding: 100px;
+}
 
 .login-signup {
   display: flex;
@@ -162,6 +165,7 @@ ol li {
 
 .loginPage {
   align-items: center;
+  height: 100%;
 }
 
 .mealTitle {
