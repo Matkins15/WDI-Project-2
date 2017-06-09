@@ -2,36 +2,39 @@
 <h1 class="mealTitle"><b>The Coders Digest</b></h1>
 
   <!-- Default/Seeded Meals -->
-  <div class="container">
+  <div id="mealsShow">
+      <div class="eachMeal">
+          <ul>
+              {{#each universalMeals}}
+              <li>
+                  <h1><a href="/users/{{../userId}}/meals/{{this.id}}/edit">{{this.name}}</a></h1>
+                  <img src="{{this.imgURL}}" width="350px" alt=""><br><br>
+                  <p>{{this.description}}</p>
+                  <p>Meal: {{this.exampleMeal}}</p>
+                  <p>Calories: {{this.calories}}</p>
+              </li>
+              {{/each}}
+          </ul>
 
-    <ul>
-        {{#each universalMeals}}
-        <li>
-            <h1><a href="/users/{{../userId}}/meals/{{this.id}}/edit">{{this.name}}</a></h1>
-            <img src="{{this.imgURL}}" width="350px" alt=""><br><br>
-            <p>{{this.description}}</p>
-            <p>Meal: {{this.exampleMeal}}</p>
-            <p>Calories: {{this.calories}}</p>
-        </li>
-        {{/each}}
-    </ul>
+          <!-- Added User Meals -->
+          <ul>
 
-    <!-- Added User Meals -->
-    <ul>
+              {{#each user.meals}}
+              <li>
+                  <h1><a href="/users/{{../userId}}/meals/{{this.id}}/edit">{{this.name}}</a></h1>
+                  <img src="{{this.imgURL}}" width="350px" alt=""><br><br>
+                  <p>{{this.description}}</p>
+                  <p>Meal: {{this.exampleMeal}}</p>
+                  <p>Calories: {{this.calories}}</p>
+              </li>
+              {{/each}}
 
-        {{#each user.meals}}
-        <li>
-            <h1><a href="/users/{{../userId}}/meals/{{this.id}}/edit">{{this.name}}</a></h1>
-            <img src="{{this.imgURL}}" width="350px" alt=""><br><br>
-            <p>{{this.description}}</p>
-            <p>Meal: {{this.exampleMeal}}</p>
-            <p>Calories: {{this.calories}}</p>
-        </li>
-        {{/each}}
-
-    </ul>
-<hr>
+          </ul>
+      </div>
 </div>
+
+<hr>
+
 <div class="create">
   <h1>Create your new meal here!</h1>
   <div class="row">
