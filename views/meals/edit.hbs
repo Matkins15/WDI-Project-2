@@ -32,17 +32,18 @@
                   <label for="exampleMeal">Meal:</label>
                   <input type="text" name="exampleMeal" class="form-control">
               </div>
-              <div>
-                  <input type="submit" value="Save" class="btn btn-primary">
-              </div>
-              <form action="/users/{{userId}}/meals/{{meal.id}}?_method=DELETE" method="POST">
-                  <input class="btn btn-danger" type="submit" value="Delete This">
-              </form>
           </form>
+      </div>
+</div>
 
-      </div>
-      <div>
-          <!-- <a href="/meals/{{meal.id}}" class="btn btn-default">Back</a> -->
-          <a href="/users/show" class="btn btn-default">Main Page</a>
-      </div>
+<div class="editButtons">
+        <input type="submit" value="Save" class="btn btn-primary">
+
+        <form action="/users/{{userId}}/meals/{{meal.id}}?_method=DELETE" method="POST">
+            <input class="btn btn-danger" type="submit" value="Delete This">
+        </form>
+
+        <a href="/users/{{userId}}" class="backButton">
+            <input type="submit" value="Back" class="btn btn-warning">
+        </a>
 </div>

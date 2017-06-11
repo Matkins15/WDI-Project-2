@@ -94,11 +94,13 @@ div.container.loginPage {
   height: 200px;
   margin-top: 100px;
 }
+
 .col-md.6{
   height: 500px;
   margin: auto;
   width: 50%;
 }
+
 .aboutSection {
     font-weight: bold;
     font-size: 36px;
@@ -156,6 +158,16 @@ ol li {
 
 .container-fluid {
   width: auto;
+}
+
+.editButtons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0px;
+    width: 400px;
 }
 
 .create h1 {
@@ -265,7 +277,6 @@ span.psw {
   text-align: center;
   width: 100% !important;
 }
-
 
 .fa {
   font-size: 36px;
